@@ -12,6 +12,8 @@ import { PortafolioItemComponent } from './components/portafolio-item/portafolio
 import { APP_ROUTING } from './app.routes';
 
 import { InformacionService } from './services/informacion.service';
+import { ProductosService } from './services/productos.service';
+
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { InformacionService } from './services/informacion.service';
     HttpModule
   ],
   providers: [
-    InformacionService
+    InformacionService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })
