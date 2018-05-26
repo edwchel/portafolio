@@ -20,3 +20,10 @@
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
   }
+
+  /* SVG */
+
+  svg path,
+svg rect{
+  fill: black;
+}

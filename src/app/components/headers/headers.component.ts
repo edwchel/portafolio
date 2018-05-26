@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { InformacionService } from '../../services/informacion.service';
 
@@ -7,8 +8,13 @@ import { InformacionService } from '../../services/informacion.service';
 })
 export class HeadersComponent {
 
-  constructor(public _is: InformacionService){
+  constructor(public _is: InformacionService,
+              private route: Router){
+  }
 
+  buscar_producto(termino: string){
+    console.log(termino + ' buscar_producto')
+    this.route.navigate(['buscar', termino])
   }
 
 }
