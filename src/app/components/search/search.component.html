@@ -23,8 +23,9 @@
         <h3>Por favor espere</h3>
       </div>
 
-    <!-- se mostrara si el producto si hay mas de cero-->
-    <div *ngIf="_ps.productos_filtrado.length > 0 && !cargando"  
+    <!-- se mostrara si el producto si hay mas de cero
+    *ngIf="_ps.productos_filtrado.length > 0 && !cargando" -->
+    <div *ngIf="_ps.productos_filtrado.length > 0 && !_ps.cargando"  
        class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 animated fadeIn ">
       <a *ngFor="let producto of _ps.productos_filtrado"
       [routerLink]="['/producto', producto.cod]" class="rk-item ae-masonry__item">
